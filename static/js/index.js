@@ -1,0 +1,131 @@
+$(function(){	
+	mySlide();	
+});
+
+function mySlide() {
+	$('.swiper-slide').each(function() {
+		var _this = $(this);
+		if($(this).hasClass('swiper-slide-active')) {
+			_this.find('.solid').addClass("twisterInUpRight").animate({opacity:'1'},200,function(){
+				_this.find('.dashed').addClass("twisterInUpLeft").animate({opacity:'1'},800,function(){
+					_this.find('.logo').addClass("bounceInRight").animate({"left":'0'},500,function(){
+						_this.find('.img').addClass("twisterInUpLeft").animate({opacity:'1'},500,function(){
+							_this.find('.img1').addClass("zoomIn").show();
+							setTimeout(function(){
+								_this.find('.img2').addClass("bounceInUp").show();
+							},600);
+						});
+					});					
+				});
+			});
+			setTimeout(function(){
+				_this.find('.comTitle').addClass("comTitleSc").animate({'opacity':'1'},300);				
+			},400);
+			setTimeout(function(){
+				_this.find('.left').addClass('slideInLeft').animate({left:'0.8rem',opacity:'1'},600);
+				_this.find('.right').addClass('slideInRight').animate({right:'0.8rem',opacity:'1'},600);
+				_this.find('.intr-con-box-b').addClass("boxkuosan").css({"width":"100%","height":"100%"});
+				_this.find('.borderTop').addClass("rotateInDownLeft").animate({opacity:'1'},500);
+			},800);
+			setTimeout(function(){
+				_this.find('.intr-con-text').animate({opacity:'1','top':'0'},600);
+			},1600);
+			setTimeout(function(){
+				_this.find('.borderTop1').animate({opacity:'1'},600);
+				_this.find('.borderLeft').animate({opacity:'1'},600);
+				_this.find('.borderRight').animate({opacity:'1'},600);
+				_this.find('.borderBottom1').animate({opacity:'1'},600);
+			},3000);
+			setTimeout(function(){
+				_this.find('.bigTitle').addClass('bounceInLeft').show();
+			},1200);			
+			setTimeout(function(){
+				_this.find('.list').addClass("twisterInUpRight").animate({opacity:'1'},1000,function(){
+					_this.find('.list').children('li').addClass('opacity').animate({'opacity':'1'},300);
+				});
+			},1400);
+			setTimeout(function(){
+				_this.find('.borderBottom').addClass("rotateInUpRight").animate({opacity:'1'},500);
+				_this.find('.img3-box').animate({opacity:'1'},600,function(){
+					$("#img4").addClass("scaleImg");
+				});
+				_this.find('.img3').animate({opacity:'1','top':'0'},600);
+				_this.find('.img10').animate({'opacity':'1','top':'0','left':"0"},600);
+				_this.find('.img11').animate({'opacity':'1','top':'0','right':"0"},600);
+				_this.find('.img12').animate({'opacity':'1','bottom':'0','left':"0"},600);
+				_this.find('.img13').animate({'opacity':'1','bottom':'0','right':"0"},600,function(){
+					$(".imgListTitle").addClass("boxkuosan").animate({'opacity':'1'},600);
+				});
+				// _this.find('.companyList').find("span:nth-of-type(2n-1)").animate({'left':'0','opacity':"1"},600);
+				// _this.find('.companyList').find("span:nth-of-type(2n)").animate({'left':'0','opacity':"1"},600);
+			},2400);
+			setTimeout(function(){
+				_this.find('.img14').addClass('boxkuosan').animate({opacity:'1'},600);;
+			},2000);	
+			setTimeout(function(){
+				_this.find('.img15').animate({'opacity':'1','left':'0','top':'0'},300);				
+			},2200);	
+			setTimeout(function(){
+				_this.find('.img16').animate({'opacity':'1','left':'.2rem','top':'.2rem'},300);				
+			},3200);
+			setTimeout(function(){
+				_this.find('.img17').animate({'opacity':'1','top':'.4rem','left':'.4rem'},300);				
+			},4200);
+			setTimeout(function(){
+				_this.find('.img18').animate({'opacity':'1','top':'.6rem','left':'.6rem'},300);				
+			},5200);
+			setTimeout(function(){
+				_this.find('.img19').animate({'opacity':'1','right':'0','top':'.8rem'},300);				
+			},6200);
+			setTimeout(function(){
+				_this.find('.img20').animate({'opacity':'1','right':'.2rem','top':'1rem'},300);				
+			},7200);
+			setTimeout(function(){
+				_this.find('.img21').animate({'opacity':'1','right':'.4rem','top':'1.2rem'},300);				
+			},8200);
+			setTimeout(function(){
+				_this.find('.img22').animate({'opacity':'1','right':'.6rem','top':'1.4rem'},300);				
+			},9200);	
+		}else{
+			_this.find('.img15').css({'opacity':'0','left':'-1rem','top':'-1rem'});	
+			_this.find('.img16').css({'opacity':'0','left':'-1rem','top':'-1rem'});	
+			_this.find('.img17').css({'opacity':'0','left':'-1rem','top':'-1rem'});	
+			_this.find('.img18').css({'opacity':'0','left':'-1rem','top':'-1rem'});	
+			_this.find('.img19').css({'opacity':'0','right':'-1rem','top':'-1rem'});	
+			_this.find('.img20').css({'opacity':'0','right':'-1rem','top':'-1rem'});		
+			_this.find('.img21').css({'opacity':'0','right':'-1rem','top':'-1rem'});		
+			_this.find('.img22').css({'opacity':'0','right':'-1rem','top':'-1rem'});				
+			_this.find('.solid').removeClass("twisterInUpRight").css({opacity:'0'});
+			_this.find('.dashed').removeClass("twisterInUpLeft").css({opacity:'0'});
+			_this.find('.logo').removeClass("bounceInRight").css({'left':'-100%'});
+			_this.find('.img').removeClass("twisterInUpLeft").css({opacity:'0'});
+			_this.find('.img1').removeClass("zoomIn").hide();
+			_this.find('.img2').removeClass("bounceInUp").hide();
+			_this.find('.left').removeClass('slideInLeft').css({left:'9.8rem',opacity:'0'});
+			_this.find('.right').removeClass('slideInRight').css({right:'9.8rem',opacity:'0'});
+			_this.find('.comTitle').removeClass("comTitleSc").css({'opacity':'0'});
+			_this.find('.img3').css({'opacity':'0','top':'-8.3rem'});
+			_this.find('.intr-con-box-b').removeClass("boxkuosan").css({"width":"0","height":"0"});
+			_this.find('.borderTop').removeClass("rotateInDownLeft").css({'opacity':'0'});
+			_this.find('.intr-con-text').css({'opacity':'0','top':'11rem'});
+			// _this.find('.companyList').find("span:nth-of-type(2n-1)").css({'left':'50%','opacity':"0"});
+			// _this.find('.companyList').find("span:nth-of-type(2n)").css({'left':'-50%','opacity':"0"});
+			_this.find('.borderBottom').removeClass("rotateInDownRight").css({'opacity':'0'});
+			_this.find('.borderTop1').css({'opacity':'0'});
+			_this.find('.borderLeft').css({'opacity':'0'});
+			_this.find('.borderRight').css({'opacity':'0'});
+			_this.find('.borderBottom1').css({'opacity':'0'});
+			_this.find('.img3-box').css({'opacity':'0'});
+			_this.find('.bigTitle').removeClass('bounceInLeft').hide();
+			$("#img4").removeClass("scaleImg");
+			$('.list').removeClass("twisterInUpRight").css({'opacity':'0'});
+			$('.list').children('li').removeClass('opacity').css({'opacity':'0'});
+			_this.find('.img10').animate({'opacity':'0','top':'-1rem','left':"-1rem"},600);
+			_this.find('.img11').animate({'opacity':'0','top':'-1rem','right':"-1rem"},600);
+			_this.find('.img12').animate({'opacity':'0','bottom':'-1rem','left':"-1rem"},600);
+			_this.find('.img13').animate({'opacity':'0','bottom':'-1rem','right':"-1rem"},600,function(){
+				$(".imgListTitle").addClass("boxkuosan").animate({'opacity':'0'},600);
+			});
+		}
+	})
+}
